@@ -7,6 +7,8 @@ import (
 	"github.com/yuukichi-nankou/xmon-sdk-go/pkg/xmon/params"
 )
 
+// TODO クラス化したい
+
 func HostsAppend(x *xmon.XmonClient, hs []params.Host) bool {
 
 	for _, h := range hs {

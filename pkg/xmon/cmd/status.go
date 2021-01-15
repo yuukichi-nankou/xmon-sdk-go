@@ -7,7 +7,7 @@ import (
 	"github.com/yuukichi-nankou/xmon-sdk-go/pkg/xmon/params"
 )
 
-func StatsuGet(x *xmon.XmonClient, s params.StatusGet) []params.Status {
+func StatusGet(x *xmon.XmonClient, s params.StatusGet) []params.Status {
 	var status []params.Status
 
 	x.Request.Method = "status.get"
@@ -36,12 +36,6 @@ func StatsuGet(x *xmon.XmonClient, s params.StatusGet) []params.Status {
 					tmp.ActiveCheck = true
 				} else {
 					tmp.ActiveCheck = false
-				}
-			case "passive_checks_enabled":
-				if value.(string) == "1" {
-					tmp.PassiveCheck = true
-				} else {
-					tmp.PassiveCheck = false
 				}
 			}
 		}

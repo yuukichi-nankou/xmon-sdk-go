@@ -14,6 +14,6 @@ func main() {
 		fmt.Println(err)
 		return
 	}
-	status := cmd.StatsuGet(c, params.StatusGet{})
+	status := cmd.StatusGet(c, params.StatusGet{})
 	fmt.Println(status)
 }
